@@ -32,7 +32,7 @@ class MAMNet(BaseModel):
 		# Pre-processing
 		in_img = mean_shift(self.input)
 
-    	# First convolution layer 
+		# First convolution layer 
 		x = conv_xavier(in_img, num_feats, [3,3])
 		x = res_module(x, num_feats, num_res)
 		x = scale_specific_upsampler(x, int(self.args.scale))
