@@ -16,7 +16,7 @@ class DataGenerator():
         self.scale_list = list(map(lambda x: int(x), self.args.scale.split('+')))
 
         if self.args.is_test:
-            dirs = [os.path.join(self.args.data_dir, "LR", "x%d" % self.args.test_scale, self.args.dataset_name)]
+            dirs = [os.path.join(self.args.data_dir, "LR", "x%d" % self.scale_list[0], self.args.dataset_name)]
             dirs.append(os.path.join(self.args.data_dir, "HR", self.args.dataset_name))
 
             # The list of file_names for each directory 
