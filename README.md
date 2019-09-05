@@ -1,14 +1,35 @@
-# MAMNet-tensorflow
-Tensorflow implementation of MAMNet
+# MAMNet: Multi-path Adaptive Modulation Network for Image Super-Resolution
+![teaser_image](figures/teaser_image.png)
+
 
 ## Training
 
-```
-python main.py --device 0 --model_name MAMNet --data_dir D:/Dataset/DIV2K --exp_dir D:/tensorflow/experiments --exp_name MAMNet_R16C64_X2 --num_res 16 --num_feats 64 --is_MAM --is_CSI --is_ICD --is_CSD --scale 2 --is_init_res --is_train 
+```shell
+python main.py
+  --device 0
+  --model_name MAMNet
+  --data_dir <path of the DIV2K dataset>
+  --exp_dir <path of experiments>
+  --exp_name <name of experiment> 
+  --num_res 64 --num_feats 64 
+  --is_MAM --is_CSI --is_ICD --is_CSD 
+  --scale <scaling factor> 
+  --is_init_res 
+  --is_train 
 ```
 
 ## Test
 
-```
-python main.py --device 0 --model_name MAMNet --data_dir D:/Dataset/SR_test --exp_dir D:/tensorflow/experiments --exp_name MAMNet_R16C64_X2 --num_res 16 --num_feats 64 --is_MAM --is_CSI --is_ICD --is_CSD --scale 2 --is_test --dataset_name Set5 
+``` shell
+python main.py 
+  --device 0 
+  --model_name MAMNet 
+  --data_dir <path of test datasets>
+  --dataset_name <name of the test dataset>
+  --exp_dir <path of experiments> 
+  --exp_name <name of experiment>  
+  --num_res 64 --num_feats 64 
+  --is_MAM --is_CSI --is_ICD --is_CSD 
+  --scale <scaling factor> 
+  --is_test
 ```
