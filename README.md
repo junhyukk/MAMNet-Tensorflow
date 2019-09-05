@@ -6,10 +6,13 @@ In recent years, single image super-resolution (SR) methods based on deep convol
 To address this issue, we propose a novel multi-path adaptive modulation network (MAMNet).
 Specifically, we propose a multi-path adaptive modulation block (MAMB), which is a lightweight yet effective residual block that adaptively modulates residual feature responses by fully exploiting their information via three paths.
 The three paths model three types of information suitable for SR: 1) channel-specific information (CSI) using global variance pooling, inter-channel dependencies (ICD) based on the CSI, and channel-specific spatial dependencies (CSD) via depth-wise convolution.
-We demonstrate that the proposed MAMB is effective and parameter-efficient for image SR than other feature modulation methods.
-In addition, experimental results show that our MAMNet achieves favorable performance compared to most of the state-of-the-art methods with a relatively small number of parameters.
 
+The overall architecture of MAMNet is illustrated as follows:
+<br/><br/><br/><br/>
 ![MAMNet](figures/MAMNet.png)
+<br/><br/>
+The structure of MAMB is illustrated as follows:
+<br/><br/>
 ![MAMB](figures/MAMB.png)
 
 ## Training
