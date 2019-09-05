@@ -37,8 +37,8 @@ python main.py
 python main.py 
   --device 0 
   --model_name MAMNet 
-  --data_dir <path of test datasets>
-  --dataset_name <name of the test dataset>
+  --data_dir <path of datasets>
+  --dataset_name <name of dataset>
   --exp_dir <path of experiments> 
   --exp_name <name of experiment>  
   --num_res 64 --num_feats 64 
