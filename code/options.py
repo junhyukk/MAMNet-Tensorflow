@@ -24,6 +24,7 @@ parser.add_argument("--is_CSD", action='store_true')
 parser.add_argument("--is_std_norm", action='store_true')
 parser.add_argument("--is_init_res", action='store_true')
 parser.add_argument("--is_init_he", action='store_true')
+parser.add_argument("--is_bicubic_upsampled", action='store_true')
 
 # Training / Test / Restore 
 parser.add_argument("--is_resume", action='store_true')

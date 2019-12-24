@@ -40,6 +40,10 @@ class MAMNet(BaseModel):
 		# Post-processing
 		self.output = mean_shift(x, is_add=True) 
 
+		# add bicubic upsampled
+		if self.args.is_bicubic_upsampled:
+			self.output += tf.image.resize_bicubic(self.input, [self.args.patch_size*int(self.args.scale), self.args.patch_size*int(self.args.scale)])
+
 		if self.args.is_train:
 			# Loss & Training options
 			with tf.name_scope("loss"):
