@@ -42,7 +42,10 @@ class MAMNet(BaseModel):
 
 		# add bicubic upsampled
 		if self.args.is_bicubic_upsampled:
-			self.output += tf.image.resize_bicubic(self.input, [self.args.patch_size*int(self.args.scale), self.args.patch_size*int(self.args.scale)])
+			if self.args.is_test:
+				self.output += tf.image.resize_bicubic(self.input, [tf.shape(self.input)[1]*int(self.args.scale), tf.shape(self.input)[2]*int(self.args.scale)])
+			else:
+				self.output += tf.image.resize_bicubic(self.input, [self.args.patch_size*nit(self.args.scale), self.args.patch_size*int(self.args.scale)])
 
 		if self.args.is_train:
 			# Loss & Training options
