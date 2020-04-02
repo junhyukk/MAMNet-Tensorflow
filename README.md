@@ -1,7 +1,8 @@
-# MAMNet: Multi-path Adaptive Modulation Network for Image Super-Resolution
-![teaser_image](figures/teaser_image.png)
+# MAMNet-Tensorflow
+This repository is an official Tensorflow implementation of the paper "MAMNet: Multi-path Adaptive Modulation Network for Image Super-Resolution". [[arXiv](https://arxiv.org/abs/1811.12043)]
 
 ## Introduction
+![teaser_image](figures/teaser_image.png)
 In recent years, single image super-resolution (SR) methods based on deep convolutional neural networks (CNNs) have made significant progress. However, due to the non-adaptive nature of the convolution operation, they cannot adapt to various characteristics of images, which limits their representational capability and, consequently, results in unnecessarily large model sizes.
 To address this issue, we propose a novel multi-path adaptive modulation network (MAMNet).
 Specifically, we propose a multi-path adaptive modulation block (MAMB), which is a lightweight yet effective residual block that adaptively modulates residual feature responses by fully exploiting their information via three paths.
